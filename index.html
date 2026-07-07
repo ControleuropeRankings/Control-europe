@@ -6,78 +6,82 @@
     <title>Control Europe | Player Tiers</title>
     <style>
         :root {
-            --tier-1: #ff5555;
-            --tier-2: #ffaa00;
-            --tier-3: #55ff55;
-            --tier-4: #55ffff;
-            --tier-5: #aa00aa;
-            --bg-card: rgba(20, 24, 35, 0.85);
-            --border-glow: rgba(255, 255, 255, 0.1);
+            --tier-1: #ffaa00;
+            --tier-2: #3b82f6;
+            --tier-3: #10b981;
+            --tier-4: #8b5cf6;
+            --tier-5: #ec4899;
+            --bg-card: rgba(13, 17, 26, 0.75);
+            --border-glow: rgba(255, 255, 255, 0.08);
         }
 
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: 
-                url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1924&auto=format&fit=crop') no-repeat center top / cover,
-                #0b0d12;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: #060913;
+            /* Layering your custom diamonds and gold bars directly into the background grid */
+            background-image: 
+                url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS08kMnm4tSBxjWwDSGg1x-59cuIyfCoNCRyYRdRu5oRvSXe8Z9AMKPhsw&s=10'),
+                url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsrKYtAJy5ZFox4LHYwDvOBhm3LmWiEShRA4tJAc102w&s'),
+                radial-gradient(circle at 50% 20%, #1a1b35 0%, #060913 70%);
+            background-position: left 5% top 20%, right 8% top 60%, center center;
+            background-repeat: no-repeat, no-repeat, no-repeat;
+            background-size: 180px, 220px, cover;
             background-attachment: fixed;
             color: #ffffff;
             min-height: 100vh;
         }
 
-        /* Top Navigation Bar */
+        /* Navigation Menu */
         .navbar {
-            background: rgba(10, 12, 18, 0.9);
-            border-bottom: 2px solid #1e2330;
+            background: rgba(6, 9, 19, 0.9);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            padding: 1rem 0;
-            backdrop-filter: blur(10px);
+            gap: 1.5rem;
+            padding: 0.9rem 0;
+            backdrop-filter: blur(12px);
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
         .nav-link {
-            color: #8a92b2;
+            color: #64748b;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            padding: 0.5rem 1.5rem;
-            transition: all 0.3s;
-            border-radius: 4px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.4rem 1.2rem;
+            transition: all 0.2s ease;
         }
 
         .nav-link.active {
-            color: #55ffff;
-            text-shadow: 0 0 10px rgba(85, 255, 255, 0.6);
-            background: rgba(85, 255, 255, 0.05);
-            border-bottom: 2px solid #55ffff;
+            color: #38bdf8;
+            border-bottom: 2px solid #38bdf8;
         }
 
         .nav-link:hover {
             color: #ffffff;
         }
 
-        /* Main Wrapper */
         .wrapper {
-            max-width: 1100px;
-            margin: 2rem auto;
+            max-width: 1000px;
+            margin: 2.5rem auto;
             padding: 0 1.5rem;
         }
 
-        /* Banner Header Graphic Overlay */
+        /* Banner Header block using your exact Anime Image Asset Link */
         .hero-banner {
             width: 100%;
-            height: 220px;
+            height: 200px;
             border-radius: 12px;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background: url('https://i.ibb.co/6wGZg7r/image-591437.png') no-repeat center center / cover;
-            box-shadow: inset 0 0 40px rgba(0,0,0,0.8), 0 10px 30px rgba(0,0,0,0.5);
+            margin-bottom: 2.5rem;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8qSNiN-nLrEKu_COrEyx3a3hAg1RVU0za0rhS9B_g2gl_8qWhoYHBGHw&s=10') no-repeat center center / cover;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.8), 0 10px 25px rgba(0,0,0,0.3);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -86,31 +90,34 @@
         }
 
         .hero-banner h1 {
-            font-size: 2.8rem;
+            font-size: 2.6rem;
             margin: 0;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.9);
+            letter-spacing: 4px;
+            color: #ffffff;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.8), 0 0 20px rgba(56, 189, 248, 0.5);
         }
 
         .hero-banner p {
-            font-size: 1.1rem;
-            color: #a0aec0;
-            margin: 0.5rem 0 0 0;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+            font-size: 0.95rem;
+            color: #e2e8f0;
+            margin: 0.4rem 0 0 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
 
-        /* Tier Blocks Matrix */
+        /* Tier Boxes Grid Layout */
         .tier-card {
             background: var(--bg-card);
             border: 1px solid var(--border-glow);
             border-radius: 12px;
             margin-bottom: 1.5rem;
             display: grid;
-            grid-template-columns: 200px 1fr;
+            grid-template-columns: 180px 1fr;
             overflow: hidden;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            backdrop-filter: blur(16px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
         }
 
         .tier-label-box {
@@ -118,27 +125,28 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(0, 0, 0, 0.25);
             border-right: 1px solid var(--border-glow);
+            padding: 1.5rem;
             text-align: center;
-            padding: 1rem;
         }
 
         .tier-label-box h2 {
-            font-size: 2rem;
+            font-size: 1.6rem;
             margin: 0;
-            font-weight: 900;
+            font-weight: 800;
+            letter-spacing: 1px;
         }
 
         .tier-label-box span {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 0.25rem;
-            color: #a0aec0;
+            letter-spacing: 1.5px;
+            margin-top: 0.4rem;
+            color: #64748b;
+            font-weight: 600;
         }
 
-        /* Slots Columns Grid */
         .slots-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -146,7 +154,7 @@
 
         .slot-column {
             padding: 1.2rem;
-            border-right: 1px solid rgba(255, 255, 255, 0.05);
+            border-right: 1px solid rgba(255, 255, 255, 0.03);
             display: flex;
             flex-direction: column;
             gap: 0.6rem;
@@ -157,43 +165,36 @@
         }
 
         .slot-title {
-            font-size: 0.8rem;
-            font-weight: bold;
+            font-size: 0.75rem;
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            padding-bottom: 0.4rem;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            color: #e2e8f0;
+            letter-spacing: 2px;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            margin-bottom: 0.2rem;
         }
 
-        /* Infinite Player Tags Style */
         .player-item {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 0.5rem 0.8rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 0.6rem 0.8rem;
             border-radius: 6px;
-            font-size: 0.95rem;
-            color: #e2e8f0;
-            transition: transform 0.2s, background 0.2s;
+            font-size: 0.9rem;
+            color: #cbd5e1;
         }
 
-        .player-item:hover {
-            background: rgba(255, 255, 255, 0.12);
-            transform: translateX(3px);
-        }
+        /* Dynamic styling matching your color profiles */
+        .t1 { border: 1px solid rgba(255, 170, 0, 0.3); box-shadow: inset 0 0 15px rgba(255, 170, 0, 0.05); } .t1 h2 { color: var(--tier-1); }
+        .t2 { border: 1px solid rgba(59, 130, 246, 0.3); } .t2 h2 { color: var(--tier-2); }
+        .t3 { border: 1px solid rgba(16, 185, 129, 0.3); } .t3 h2 { color: var(--tier-3); }
+        .t4 { border: 1px solid rgba(139, 92, 246, 0.3); } .t4 h2 { color: var(--tier-4); }
+        .t5 { border: 1px solid rgba(236, 72, 153, 0.3); } .t5 h2 { color: var(--tier-5); }
 
-        /* Distinctive Left Side Colors per Tier Row */
-        .t1 { border-left: 5px solid var(--tier-1); } .t1 h2 { color: var(--tier-1); }
-        .t2 { border-left: 5px solid var(--tier-2); } .t2 h2 { color: var(--tier-2); }
-        .t3 { border-left: 5px solid var(--tier-3); } .t3 h2 { color: var(--tier-3); }
-        .t4 { border-left: 5px solid var(--tier-4); } .t4 h2 { color: var(--tier-4); }
-        .t5 { border-left: 5px solid var(--tier-5); } .t5 h2 { color: var(--tier-5); }
-
-        @media (max-width: 850px) {
+        @media (max-width: 800px) {
             .tier-card { grid-template-columns: 1fr; }
             .tier-label-box { border-right: none; border-bottom: 1px solid var(--border-glow); }
             .slots-container { grid-template-columns: 1fr; }
-            .slot-column { border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+            .slot-column { border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.03); }
         }
     </style>
 </head>
@@ -207,7 +208,7 @@
     <div class="wrapper">
         <div class="hero-banner">
             <h1>Player Tiers</h1>
-            <p>Official Skill Brackets (Lower number = Higher skill)</p>
+            <p>Official Skill Brackets</p>
         </div>
 
         <!-- TIER 1 -->
@@ -218,16 +219,16 @@
             </div>
             <div class="slots-container">
                 <div class="slot-column">
-                    <div class="slot-title" style="color: #ff5555;">▲ HIGH</div>
+                    <div class="slot-title" style="color: #ffaa00;">HIGH</div>
                     <div class="player-item">PlayerOne</div>
                     <div class="player-item">PlayerTwo</div>
                 </div>
                 <div class="slot-column">
-                    <div class="slot-title" style="color: #ffaa00;">■ MID</div>
+                    <div class="slot-title" style="color: #cbd5e1;">MID</div>
                     <div class="player-item">PlayerA</div>
                 </div>
                 <div class="slot-column">
-                    <div class="slot-title" style="color: #ffff55;">▼ LOW</div>
+                    <div class="slot-title" style="color: #64748b;">LOW</div>
                     <div class="player-item">Gamer1</div>
                 </div>
             </div>
@@ -240,16 +241,9 @@
                 <span>Advanced Elite</span>
             </div>
             <div class="slots-container">
-                <div class="slot-column">
-                    <div class="slot-title" style="color: #ff5555;">▲ HIGH</div>
-                    <!-- Add player tags here -->
-                </div>
-                <div class="slot-column">
-                    <div class="slot-title" style="color: #ffaa00;">■ MID</div>
-                </div>
-                <div class="slot-column">
-                    <div class="slot-title" style="color: #ffff55;">▼ LOW</div>
-                </div>
+                <div class="slot-column"><div class="slot-title" style="color: #3b82f6;">HIGH</div></div>
+                <div class="slot-column"><div class="slot-title" style="color: #cbd5e1;">MID</div></div>
+                <div class="slot-column"><div class="slot-title" style="color: #64748b;">LOW</div></div>
             </div>
         </div>
 
@@ -260,15 +254,9 @@
                 <span>Competent</span>
             </div>
             <div class="slots-container">
-                <div class="slot-column">
-                    <div class="slot-title" style="color: #ff5555;">▲ HIGH</div>
-                </div>
-                <div class="slot-column">
-                    <div class="slot-title" style="color: #ffaa00;">■ MID</div>
-                </div>
-                <div class="slot-column">
-                    <div class="slot-title" style="color: #ffff55;">▼ LOW</div>
-                </div>
+                <div class="slot-column"><div class="slot-title" style="color: #10b981;">HIGH</div></div>
+                <div class="slot-column"><div class="slot-title" style="color: #cbd5e1;">MID</div></div>
+                <div class="slot-column"><div class="slot-title" style="color: #64748b;">LOW</div></div>
             </div>
         </div>
 
@@ -279,15 +267,9 @@
                 <span>Casual</span>
             </div>
             <div class="slots-container">
-                <div class="slot-column">
-                    <div class="slot-title" style="color: #ff5555;">▲ HIGH</div>
-                </div>
-                <div class="slot-column">
-                    <div class="slot-title" style="color: #ffaa00;">■ MID</div>
-                </div>
-                <div class="slot-column">
-                    <div class="slot-title" style="color: #ffff55;">▼ LOW</div>
-                </div>
+                <div class="slot-column"><div class="slot-title" style="color: #8b5cf6;">HIGH</div></div>
+                <div class="slot-column"><div class="slot-title" style="color: #cbd5e1;">MID</div></div>
+                <div class="slot-column"><div class="slot-title" style="color: #64748b;">LOW</div></div>
             </div>
         </div>
 
@@ -298,19 +280,12 @@
                 <span>Beginner</span>
             </div>
             <div class="slots-container">
-                <div class="slot-column">
-                    <div class="slot-title" style="color: #ff5555;">▲ HIGH</div>
-                </div>
-                <div class="slot-column">
-                    <div class="slot-title" style="color: #ffaa00;">■ MID</div>
-                </div>
-                <div class="slot-column">
-                    <div class="slot-title" style="color: #ffff55;">▼ LOW</div>
-                </div>
+                <div class="slot-column"><div class="slot-title" style="color: #ec4899;">HIGH</div></div>
+                <div class="slot-column"><div class="slot-title" style="color: #cbd5e1;">MID</div></div>
+                <div class="slot-column"><div class="slot-title" style="color: #64748b;">LOW</div></div>
             </div>
         </div>
 
     </div>
-
 </body>
 </html>
