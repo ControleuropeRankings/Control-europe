@@ -63,21 +63,21 @@
             position: fixed;
             top: 50%;
             transform: translateY(-50%);
-            width: 260px; /* Adjusted size to fit layout nicely */
+            width: 240px;
             height: auto;
             z-index: 10;
-            pointer-events: none; /* Prevents blocking clicks on background elements */
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
+            pointer-events: none;
+            filter: drop-shadow(0 10px 25px rgba(0,0,0,0.65));
             animation: floatMascot 4s ease-in-out infinite;
         }
 
         .mascot-left {
-            left: 20px;
+            left: 30px;
         }
 
         .mascot-right {
-            right: 20px;
-            animation-delay: 2s; /* Alternates floating effect */
+            right: 30px;
+            animation-delay: 2s;
         }
 
         @keyframes floatMascot {
@@ -271,7 +271,7 @@
         .ladder-name { font-size: 1.05rem; color: #cbd5e1; transition: all 0.15s ease; font-weight: 700; letter-spacing: 0.5px; }
         .ladder-row:hover .ladder-name { color: #ffffff; }
 
-        /* Hide side images and scale page on narrower viewports to prevent overcrowding */
+        /* Hide side images on screen sizes that are too small to avoid crowding */
         @media (max-width: 1400px) {
             .side-mascot { display: none; }
         }
@@ -293,9 +293,9 @@
         <a href="https://discord.gg/vxRjx35ytT" target="_blank" class="discord-btn">💬 Discord Server</a>
     </nav>
 
-    <!-- Side Images Placed Properly Outside Main Content Grid -->
-    <img src="image_56373f.png" alt="Left Mascot" class="side-mascot mascot-left">
-    <img src="image_56375b.png" alt="Right Mascot" class="side-mascot mascot-right">
+    <!-- FIXED: Links updated directly to your images so they load perfectly -->
+    <img src="https://g96b.github.io/control-europe-rankings/image_56373f.png" alt="Left Mascot" class="side-mascot mascot-left">
+    <img src="https://g96b.github.io/control-europe-rankings/image_56375b.png" alt="Right Mascot" class="side-mascot mascot-right">
 
     <div class="wrapper">
         <div class="hero-banner"><h1>Player Ranks</h1></div>
@@ -345,7 +345,7 @@
                 <div class="ladder-row r-platinum" onclick="handleInteraction(event)"><span class="ladder-rank">#16</span><span class="ladder-name">Fshy<span class="stars">⭐</span></span></div>
                 <div class="ladder-row r-platinum" onclick="handleInteraction(event)"><span class="ladder-rank">#17</span><span class="ladder-name">Rimu<span class="stars">⭐</span></span></div>
                 <div class="ladder-row r-platinum" onclick="handleInteraction(event)"><span class="ladder-rank">#18</span><span class="ladder-name">babatunde<span class="stars">⭐</span></span></div>
-                <div class="ladder-row r-platinum" onclick="handleInteraction(event)"><span class="ladder-rank">#19</span><span class="ladder-name">Jayden<span class="stars">⭐</span></span></div>
+                <div class="ladder-row r-platinum" onclick="handleInteraction(event)."><span class="ladder-rank">#19</span><span class="ladder-name">Jayden<span class="stars">⭐</span></span></div>
                 <div class="ladder-row r-platinum" onclick="handleInteraction(event)"><span class="ladder-rank">#20</span><span class="ladder-name">Kolz<span class="stars">⭐</span></span></div>
             </div>
         </div>
